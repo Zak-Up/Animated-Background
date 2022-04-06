@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Background</title>
+
+    <!--=== GOOGLE FONTS ===-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap">
+    <link rel="shortcut icon" href="/assets/aldi-sigun-favicon.png" type="image/x-icon">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        body{
+            font-family: 'Syne', sans-serif;
+            font-size: 18px;
+            color: #fff;
+            overflow-x: hidden;
+            background: #000 url(/assets/bg2.jpg) no-repeat;
+            background-size: cover;
+            background-position: 0% center;
+            background-attachment: fixed;
+            animation: bgmovement 20s ease infinite;
+        }
+        @keyframes bgmovement{
+            50%{
+                background-position: 150% center;
+            }
+        }
+        
+        a{
+            font-family: 'Syne', sans-serif;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        h1, h2, h3, h4, h5, h6{
+            font-family: 'Krona One', sans-serif;
+        }
+
+        h1{
+            font-size: 48px;
+            font-weight: normal;
+        }
+
+        h3{
+            font-size: 22px;
+        }
+
+        h5{
+            font-size: 18px;
+        }
+
+        /* p{
+            font-size: 14px;
+        } */
+
+        header{
+            display: flex;
+            justify-content: space-between;
+            padding-right: 123px;
+            position: fixed;
+            width: 100%;
+            z-index: 99;
+        }
+
+        .logo{
+            width: 305px;
+            padding: 5px 30px;
+            background: linear-gradient(94deg, #0075ff 0%, #c92fff 100%);
+            text-align: center;
+            transform:skew(-15deg), translateX(-15px);
+            border-radius: 0 0 40px 0;
+            position: relative;
+            height: 3.5rem;
+        }
+
+        .logo::before{
+            position: absolute;
+            content: '';
+            top: 0;
+            right: -20px;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(94deg, #0075ff 0%, #c92fff 100%);
+            border-radius: 0 0 40px 0;
+            opacity: .3;
+            z-index: -1;
+        }
+
+        .menu ul li{
+            list-style: none;
+            display: inline-table;
+            margin: 30px 25px;
+        }
+
+        .menu ul li a{
+            color: #fff;
+        }
+
+        .banner{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 180px 0 0 123px;
+        }
+
+        .banner__text{
+            max-width: 570px;
+            padding-right: 70px;
+        }
+
+        .banner__text p{
+            margin: 20px 0 50px;
+            line-height: 28px;
+        }
+
+        .btn__group a{
+            display: inline-table;
+            padding: 14px;
+            width: 190px;
+            background: linear-gradient(94deg, #0075ff 0%, #c92fff 100%);
+            font-size: 18px;
+            font-weight: 700;
+            text-align: center;
+            transform: skew(-10deg);
+            margin-right: 15px;
+            transition: all ease 0.6s;
+        }
+
+        .btn__group .secondary{
+            background: transparent;
+            border: 1px solid #c032fe;
+        }
+
+        .btn__group a:hover{
+            border: 1px solid #c032fe;
+            background: transparent;
+        }
+
+        .btn__group .secondary:hover{
+            background: linear-gradient(94deg, #0075ff 0%, #c92fff 100%);
+            border-color: transparent;
+        }
+
+        .banner__img{
+            display: flex;
+            margin-right: -140px;
+        }
+
+        .banner__img .item{
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 22px;
+            margin: 0 15px;
+        }
+
+        .item__text{
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .item__text h5{
+            margin-top: 8px;
+            font-weight: normal;
+        }
+
+        .banner__counter{
+            width: 100%;
+        }
+
+        .block__wrap{
+            display: flex;
+            justify-content: space-between;
+            max-width: 516px;
+        }
+
+        .block__wrap .block{
+            background-color: rgba(255, 255, 255, 0.1);
+            text-align: center;
+            padding: 15px;
+            width: 150px;
+            margin-bottom: 3rem;
+        }
+
+        /* Scroll Bar Bonus */
+        ::-webkit-scrollbar{
+	    width: .6rem;
+	    border-radius: .5rem;
+	    background-color: linear-gradient(94deg, #0075ff 0%, #c92fff 100%);
+        }
+
+        ::-webkit-scrollbar-thumb{
+	    background-color: rgb(255, 139, 214);
+	    border-radius: .5rem;
+        }
+
+        ::-webkit-scrollbar-thumb:hover{
+	    background-color: rgb(237, 36, 251);
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <main>
+        <header>
+            <div class="logo">
+                <a href="#"><img src="/assets/logoT.png" alt=""></a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#"></a>Market</li>
+                    <li><a href="#"></a>Community</li>
+                    <li><a href="#"></a>Wallet</li>
+                    <li><a href="#"></a>EN</li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="banner">
+            <div class="banner__text">
+                <h1>Discover, Collect & Sell NFT</h1>
+                <p>Explore the NFT world buy and sell nft easily, with crypto wallet partner.</p>
+                <div class="btn__group">
+                    <a href="#" class="primary"><span>Discover</span></a>
+                    <a href="#" class="secondary"><span>Create</span></a>
+                </div>
+            </div>
+            <div class="banner__img">
+                <div class="item">
+                    <div class="img__group">
+                        <img src="/assets/nft3.jpg" alt="">
+                        <img src="/assets/nft2.jpg" alt="">
+                        <img src="/assets/nft7.jpg" alt="">
+                    </div>
+                    <div class="item__text">
+                        <div class="item__text__left">
+                            <p>Milad Fakurian</p>
+                            <h5>Butterfly Linear Art</h5>
+                        </div>
+                        <div class="item__text_right">
+                            <a href="#"><img src="/assets/flecha.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="img__group">
+                        <img src="/assets/nft1.jpg" alt="">
+                        <img src="/assets/nft4.jpg" alt="">
+                        <img src="/assets/nft5.jpg" alt="">
+                    </div>
+                    <div class="item__text">
+                        <div class="item__text__left">
+                            <p>Milad Fakurian</p>
+                            <h5>Butterfly Linear Art</h5>
+                        </div>
+                        <div class="item__text_right">
+                            <a href="#"><img src="/assets/flecha.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="banner__counter">
+                <div class="block__wrap">
+                    <div class="block">
+                        <h3><span class="counter">30</span>k+</h3>
+                        <p>Art Works</p>
+                    </div>
+                    <div class="block">
+                        <h3><span class="counter">15</span>k+</h3>
+                        <p>Artist</p>
+                    </div>
+                    <div class="block">
+                        <h3><span class="counter">12</span>k+</h3>
+                        <p>User Active</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JQUERY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- WAYPOINTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <!-- COUNTER UP JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <!-- JQUERY CYCLE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.0.3/jquery.cycle.all.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            $('.counter').counterUp({
+                delay: 10,
+                time: 2000
+            });
+
+            $('.img__group').cycle({
+                timeout: 1000
+            });
+        });
+    </script>
+</body>
+</html>
